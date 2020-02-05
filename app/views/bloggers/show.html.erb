@@ -1,2 +1,15 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @blogger.name %></h1>
+<div><%= @blogger.age %> years old </div>
+<p><%= @blogger.bio %></p>
+
+Total Number of Likes: ❤️<%= @total_likes %>
+<%# Featured Post: <%= link_to @most_liked_post.title, blog_path(@most_liked_post) %> 
+
+<%= button_to "delete", @blogger, :method => :delete %>
+
+  
+
+
+<%# The total likes on all of that blogger's posts
+A link to that blogger's featured post (the post with the most likes)
+BONUS A list of that user's top 5 most written about destinations (the destinations with the most posts) %>

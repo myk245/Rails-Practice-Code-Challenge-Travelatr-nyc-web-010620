@@ -1,0 +1,16 @@
+<h3><%= @post.title %></h3>
+by <%= link_to @post.blogger.name, blogger_path(@post.blogger) %><br>
+
+<p><%= @post.content %></div><p>
+<div>Destination: <%= link_to @post.destination.name, destination_path(@post.destination) %>, <%= @post.destination.country %></div><br>
+<div>❤️<%= @post.likes %></div><br>
+
+<%# # Shout out to @ftodoroski for helping me figure out the like button!!! %>
+<%= button_to 'Like', likes_path(@post), method: :patch %><br>
+
+<%= button_to 'Delete Post', post_path(@post), method: :delete %>
+
+
+
+
+     

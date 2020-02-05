@@ -1,0 +1,21 @@
+<h4>Update Your Post</h4>
+
+<% if flash[:message] %>
+<h4 style= "color: red;"> <%= @post.errors.full_messages[0] %></h4>
+<% end %>
+
+<%= form_for @post do |f| %>
+   <%= f.label :title %>
+   <%= f.text_field :title %>
+   <br>
+   <br>
+   <br>
+   <%= f.label :content %>
+   <%= f.text_area :content %>
+   <br>
+   <%= f.collection_select(:blogger_id, Blogger.all, :id, :name) %>
+   <br>
+   <%= f.collection_select(:destination_id, Destination.all, :id, :name) %>
+   <br>
+   <%= f.submit %>
+   <% end %>
