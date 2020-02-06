@@ -12,4 +12,4 @@ end
 # On this page, a user should see:
 # [x] A link to the page of that post's author
 # [x] A link to the page of that post's destination
-# [] A like button link that increases the like count for that post (should take the user to the same page)
+# [x] A like button link that increases the like count for that post (should take the user to the same page)

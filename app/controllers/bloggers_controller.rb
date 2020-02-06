@@ -11,7 +11,8 @@ class BloggersController < ApplicationController
     # We start at 0 and then iterate through the array of all posts belonging to the user. 
     # For each post in the array, we grab the number of likes and then add it to the sum. 
     @total_likes = @posts.inject(0) {|sum, post| sum + post.likes}
-
+    # Right now the blogger's show page doesn't render if a blogger has 0 likes, so in the future (when the coding challenge for Mod 2 is behind me), 
+    # I'd like to come back and fix this bit of code. 
     @most_liked_post= @posts.max_by { |post| post.likes }
   end
 

@@ -16,15 +16,13 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     # if the post saves, that means that it passes the validations, 
     # so show the success message and redirect to the post's show page
-    if @post.save
+    if @post.save 
       flash[:message] = "post successfully created"
       redirect_to post_path(@post)
     else
       # if the post does not save, it did not pass the validations, 
       # so we need to let the server know to display the error message 
-      flash.now[:message] = @post.errors.full_messages[0]
-      # @bloggers = Blogger.all
-      # @destinations = Destination.all 
+      flash.now[:message] = @post.errors.full_messages
       render :new
     end
   end 
